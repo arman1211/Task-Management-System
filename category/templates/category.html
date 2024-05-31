@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %} <title>Add category</title>{% endblock title %}
+{% block content %}
+<h1 class='text-center text-success'>Add category</h1>
+<form action="" method = 'post' class='w-50 m-auto'>
+    {% csrf_token %}
+    {{form | crispy}}
+    <input type="submit" class='btn btn-primary' value="Add">
+
+</form>
+{% endblock content %}
