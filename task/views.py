@@ -24,7 +24,6 @@ def editTask(request,id):
     if request.method =='POST':
         taskform = TaskForm(request.POST,instance=task)
         if taskform.is_valid():
-            task.is_completed = True
             taskform.save()
             return redirect('showtask')
     
